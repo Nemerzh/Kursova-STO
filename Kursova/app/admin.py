@@ -1,6 +1,18 @@
 from django.contrib import admin
 from .models import Client, AutoPart, TypeService, Service, ServiceAutoPart, Contract, ContractService
+from django.db import models
+from django.contrib import admin
 
+
+class MyAdminSite(admin.AdminSite):
+    site_header = 'Станція ТО'
+    site_title = "СТО"
+    # Інші налаштування адміністративного інтерфейсу, якщо потрібно
+
+
+# Реєстрація вашого зміненого адміністративного сайту
+admin_site = MyAdminSite(name='myadmin')
+admin.site = admin_site
 
 admin.site.register(Client)
 admin.site.register(AutoPart)
