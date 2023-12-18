@@ -1,0 +1,66 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <script src="static/app/js/service.js" defer></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand nav-link active" href="{% url 'home' %}">
+            <img class="logo" src="static/app/img/logo.svg" alt="logo">
+            <span class="logo-txt">Станція ТО</span>
+        </a>
+        <div class="" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'about' %}">Про нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'service' %}">Послуги та ціни</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active admin-link-position" href="/admin/">Адміністрування</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+{% block content %}
+{% endblock %}
+
+<footer class="footer sticky-bottom">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark" data-bs-theme="dark">
+        <div class="container-fluid footer-position">
+            <a class="navbar-brand nav-link active" href="{% url 'home' %}">
+                <img class="logo" src="static/app/img/logo.svg" alt="logo">
+            </a>
+            <div class="" id="navbarSupportedContent1">
+                <ul class="navbar-nav d-flex flex-row me-1">
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.facebook.com/?locale=uk_UA" target="blank"><i
+                                class="bi bi-facebook"></i></a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.instagram.com/" target="blank"><i
+                                class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.youtube.com/" target="blank"><i class="bi bi-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.logo {
+width: 100px;
+height: 50px;
+background: none;
+}
+
+.logo-txt {
+position: relative;
+top: 1.6px;
+left: -20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: transform .3s;
+}
+
+.nav-link:hover, .nav-link.active:hover {
+    color: #e63225;
+    transform: scale(1.05);
+}
+
+.footer-position {
+    justify-content: center !important;
+}
+
+.about-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.about-text {
+    margin: auto;
+    width: 50%;
+    margin-top: 30px;
+    min-height: 900px;
+}
+

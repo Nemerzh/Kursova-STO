@@ -1,0 +1,24 @@
+{% extends "app/layout.html" %}
+
+{% block title %}
+Послуги та ціни
+{% endblock %}
+
+{% block content %}
+<div class="container-md">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Назва послуги</th>
+            <th scope="col">Ціна</th>
+        </tr>
+        </thead>
+        <tbody id="service-tb">
+        <tr>
+            <td scope="row">3</td>
+            <td colspan="2">Larry the Bird</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
