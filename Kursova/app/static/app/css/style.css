@@ -18,7 +18,7 @@ left: -20px;
 
 .nav-link:hover, .nav-link.active:hover {
     color: #e63225;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .footer-position {
