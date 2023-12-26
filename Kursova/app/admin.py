@@ -1,5 +1,7 @@
 from .models import Client, AutoPart, TypeService, Service, ServiceAutoPart, Contract, ContractService
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import User
 
 
 class MyAdminSite(admin.AdminSite):
@@ -10,6 +12,7 @@ class MyAdminSite(admin.AdminSite):
 
 # Реєстрація вашого зміненого адміністративного сайту
 admin_site = MyAdminSite(name='myadmin')
+admin_site.register(User, UserAdmin)
 admin.site = admin_site
 
 admin.site.register(Client)
