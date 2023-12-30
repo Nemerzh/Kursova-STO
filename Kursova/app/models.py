@@ -89,7 +89,7 @@ class Contract(models.Model):
         db_table = 'contract'
 
     def __str__(self):
-        return f"Контракт для {self.client}"
+        return f"Контракт для {self.client} дата {self.start_date}"
 
 
 class ContractService(models.Model):
